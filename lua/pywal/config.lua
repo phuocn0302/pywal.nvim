@@ -3,7 +3,7 @@ local M = {}
 M.highlights_base = function (colors)
   return {
     Normal = { fg = colors.foreground, bg = colors.background },
-    StatusLineNC = { bg = colors.background, fg = colors.background },
+    StatusLineNC = { bg = colors.color3, fg = colors.background },
     StatusLine = { bg = colors.background, fg = colors.background },
     SignColumn = { bg = colors.background, fg = colors.background },
     MsgArea = { fg = colors.foreground, bg = colors.background },
@@ -14,7 +14,7 @@ M.highlights_base = function (colors)
     SpellLocal = { fg = colors.color4 },
     SpellRare = { fg = colors.color6 },
     NormalNC = { fg = colors.foreground, bg = colors.background },
-    Pmenu = { fg = colors.foreground, bg = colors.background },
+    Pmenu = { fg = colors.foreground, bg = colors.color0},
     PmenuSel = { fg = colors.background, bg = colors.color4 },
     WildMenu = { fg = colors.color7, bg = colors.color4 },
     CursorLineNr = { fg = colors.color1 },
@@ -22,13 +22,13 @@ M.highlights_base = function (colors)
     Folded = { fg = colors.color4, bg = colors.background },
     FoldColumn = { fg = colors.color4, bg = colors.background },
     LineNr = { fg = colors.color9, bg = colors.background },
-    FloatBorder = { fg = colors.foreground, bg = colors.background },
+    FloatBorder = { fg = colors.foreground, bg = colors.background},
     Whitespace = { fg = colors.color1 },
-    VertSplit = { fg = colors.background, bg = colors.color1 },
+    VertSplit = { fg = colors.color0, bg = colors.background},
     CursorLine = { bg = colors.background },
     CursorColumn = { bg = colors.background },
     ColorColumn = { bg = colors.background },
-    NormalFloat = { bg = colors.background },
+    NormalFloat = { bg = colors.color0},
     Visual = { bg = colors.color1, fg = colors.foreground },
     VisualNOS = { bg = colors.background },
     WarningMsg = { fg = colors.color3, bg = colors.background },
@@ -206,10 +206,11 @@ M.highlights_base = function (colors)
     -- Telescope
     TelescopeBorder = { fg = colors.color1, bg = colors.background },
     TelescopeNormal = { fg = colors.foreground, bg = colors.background },
-    TelescopeSelection = { fg = colors.background, bg = colors.color1 },
-
+    TelescopeSelection = { fg = colors.foreground, bg = colors.color0},
+    TelescopePromptPrefix = { fg = colors.color4 },
+    TelescopeMatching = { fg = colors.color4 },
     -- Indent Blank Line
-    IndentBlanklineChar = { fg = colors.color1, bg = colors.background },
+    IndentBlanklineChar = { fg = colors.color0, bg = colors.background },
 
     -- NvimTree
     NvimTreeNormal = { fg = colors.foreground, bg = colors.background },
