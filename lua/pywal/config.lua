@@ -1,6 +1,6 @@
 local M = {}
 
-M.highlights_base = function (colors)
+M.highlights_base = function(colors)
   return {
     Normal = { fg = colors.foreground, bg = colors.background },
     StatusLineNC = { bg = colors.color3, fg = colors.background },
@@ -14,21 +14,21 @@ M.highlights_base = function (colors)
     SpellLocal = { fg = colors.color4 },
     SpellRare = { fg = colors.color6 },
     NormalNC = { fg = colors.foreground, bg = colors.background },
-    Pmenu = { fg = colors.foreground, bg = colors.color0},
+    Pmenu = { fg = colors.foreground, bg = colors.color0 },
     PmenuSel = { fg = colors.background, bg = colors.color4 },
     WildMenu = { fg = colors.color7, bg = colors.color4 },
-    CursorLineNr = { fg = colors.color1 },
+    CursorLineNr = { fg = colors.color12, bg = colors.color0},
     Comment = { fg = colors.color1 },
     Folded = { fg = colors.color4, bg = colors.background },
     FoldColumn = { fg = colors.color4, bg = colors.background },
-    LineNr = { fg = colors.color9, bg = colors.background },
-    FloatBorder = { fg = colors.foreground, bg = colors.background},
+    LineNr = { fg = colors.color1, bg = colors.background },
+    FloatBorder = { fg = colors.foreground, bg = colors.background },
     Whitespace = { fg = colors.color1 },
-    VertSplit = { fg = colors.color0, bg = colors.background},
-    CursorLine = { bg = colors.background },
-    CursorColumn = { bg = colors.background },
+    VertSplit = { fg = colors.color0, bg = colors.background },
+    CursorLine = { bg = colors.color0 },
+    CursorColumn = { bg = colors.color0 },
     ColorColumn = { bg = colors.background },
-    NormalFloat = { bg = colors.color0},
+    NormalFloat = { bg = colors.color0 },
     Visual = { bg = colors.color1, fg = colors.foreground },
     VisualNOS = { bg = colors.background },
     WarningMsg = { fg = colors.color3, bg = colors.background },
@@ -131,20 +131,20 @@ M.highlights_base = function (colors)
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSKeyword = { fg = colors.color6 }, -- For keywords that don't fall in previous categories.
+    TSKeyword = { fg = colors.color6 },       -- For keywords that don't fall in previous categories.
     TSKeywordFunction = { fg = colors.color6 }, -- For keywords used to define a fuction.
-    TSLabel = { fg = colors.color7 }, -- For labels: `label:` in C and `:label:` in Lua.
+    TSLabel = { fg = colors.color7 },         -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    TSOperator = { fg = colors.color7 }, -- For any operator: `+`, but also `->` and `*` in C.
-    TSParameter = { fg = colors.color5 }, -- For parameters of a function.
+    TSOperator = { fg = colors.color7 },       -- For any operator: `+`, but also `->` and `*` in C.
+    TSParameter = { fg = colors.color5 },      -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    TSProperty = { fg = colors.color4 }, -- Same as `TSField`.
+    TSProperty = { fg = colors.color4 },       -- Same as `TSField`.
     TSPunctDelimiter = { fg = colors.color7 }, -- For delimiters ie: `.`
     TSPunctBracket = { fg = colors.foreground }, -- For brackets and parens.
-    TSPunctSpecial = { fg = colors.color7 }, -- For special punctutation that does not fall in the catagories before.
+    TSPunctSpecial = { fg = colors.color7 },   -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
     TSStringRegex = { fg = colors.color7 }, -- For regexes.
@@ -184,7 +184,7 @@ M.highlights_base = function (colors)
     diffLine = { fg = colors.color1 },
     diffIndexLine = { fg = colors.color6 },
 
-   -- Neogit
+    -- Neogit
     NeogitBranch = { fg = colors.color6 },
     NeogitRemote = { fg = colors.color6 },
     NeogitHunkHeader = { bg = colors.background, fg = colors.foreground },
@@ -194,19 +194,19 @@ M.highlights_base = function (colors)
     NeogitDiffAddHighlight = { fg = colors.color4, bg = colors.color4 },
 
     -- GitGutter
-    GitGutterAdd = { fg = colors.color4 }, -- diff mode: Added line |diff.txt|
+    GitGutterAdd = { fg = colors.color4 },   -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = colors.color5 }, -- diff mode: Changed line |diff.txt|
     GitGutterDelete = { fg = colors.color11 }, -- diff mode: Deleted line |diff.txt|
 
     -- GitSigns
-    GitSignsAdd = { fg = colors.color4 }, -- diff mode: Added line |diff.txt|
+    GitSignsAdd = { fg = colors.color4 },   -- diff mode: Added line |diff.txt|
     GitSignsChange = { fg = colors.color5 }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = colors.color11 }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
     TelescopeBorder = { fg = colors.color1, bg = colors.background },
     TelescopeNormal = { fg = colors.foreground, bg = colors.background },
-    TelescopeSelection = { fg = colors.foreground, bg = colors.color0},
+    TelescopeSelection = { fg = colors.foreground, bg = colors.color0 },
     TelescopePromptPrefix = { fg = colors.color4 },
     TelescopeMatching = { fg = colors.color4 },
     -- Indent Blank Line
