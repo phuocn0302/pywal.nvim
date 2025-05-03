@@ -100,6 +100,7 @@ M.highlights_base = function(colors)
     CmpItemAbbrMatchFuzzy = { fg = colors.color7, bg = colors.background },
     CmpItemKind = { fg = colors.color4, bg = colors.background },
     CmpItemMenu = { fg = colors.color2, bg = colors.background },
+    WinSeparator = { fg = colors.color0, bg = colors.background },
 
     -- treesitter
 
@@ -209,8 +210,16 @@ M.highlights_base = function(colors)
     TelescopeSelection = { fg = colors.foreground, bg = colors.color0 },
     TelescopePromptPrefix = { fg = colors.color4 },
     TelescopeMatching = { fg = colors.color4 },
+
     -- Indent Blank Line
-    IndentBlanklineChar = { fg = colors.color0, bg = colors.background },
+    IblScope = { fg = colors.color8 },
+    IblIndent = { fg = colors.color8 },
+
+    -- MiniIndent
+    MiniIndentscopeSymbol = { fg = colors.color1 },
+
+    -- Winstep
+    NvimSeparator = { fg = colors.color7 },
 
     -- NvimTree
     NvimTreeNormal = { fg = colors.foreground, bg = colors.background },
